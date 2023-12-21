@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useTasks from "../../hooks/useTasks";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const ToDoList = () => {
@@ -17,7 +18,7 @@ const ToDoList = () => {
 
     const myTasks = tasks.filter(item => item.userEmail == user.email && item.store == "toDo");
 
-    console.log("myTasks : ", myTasks);
+    //console.log("myTasks : ", myTasks);
 
     const handleDelete = (id, title, descriptions, deadlines, priority, store, userName, userEmail) => {
         console.log("delete id : ", id);
@@ -48,21 +49,21 @@ const ToDoList = () => {
                     .then(res => res.json())
                     .then(data => {
                         refetch();
-                       
-                            Swal.fire({
-                                title: "Deleted!",
-                                text: "Add in ongoing list",
-                                icon: "success"
-                            });
-                        
-                    })
-                    refetch();
 
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: "Add in ongoing list",
-                        icon: "success"
-                    });
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Add in ongoing list",
+                            icon: "success"
+                        });
+
+                    })
+                refetch();
+
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Add in ongoing list",
+                    icon: "success"
+                });
 
             }
         });
@@ -136,6 +137,12 @@ const ToDoList = () => {
                         Delete Task
 
                     </button>
+
+                    <p></p>
+
+                    <Link to={`/taskManagement/taskUpdate/${item._id}`}>
+                        <button className="btn btn-primary w-full  mt-[30px]">Update</button>
+                    </Link>
 
 
 

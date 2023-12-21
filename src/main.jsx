@@ -23,6 +23,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import TaskUpdate from './pages/TaskUpdate/TaskUpdate';
 
 
 const router = createBrowserRouter([
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: "completeList",
         element: <CompletedList></CompletedList>
+      },
+      {
+        path: "taskUpdate/:id",
+        element: <TaskUpdate></TaskUpdate>
       }
     ]
 
