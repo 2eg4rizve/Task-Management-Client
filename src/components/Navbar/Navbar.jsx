@@ -34,7 +34,26 @@ const Navbar = () => {
         </NavLink>
 
         <div className="mr-[20px]"></div>
+        <NavLink
+            to="/specialty"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
+            }
+        >
+          Specialty
+        </NavLink>
 
+        <div className="mr-[20px]"></div>
+        <NavLink
+            to="/contactUs"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
+            }
+        >
+           Contact-Us
+        </NavLink>
+
+        <div className="mr-[20px]"></div>
         <NavLink
             to="/taskManagement/newTask"
             className={({ isActive, isPending }) =>

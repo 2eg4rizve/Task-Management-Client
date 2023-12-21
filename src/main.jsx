@@ -25,6 +25,9 @@ import {
 } from '@tanstack/react-query'
 import TaskUpdate from './pages/TaskUpdate/TaskUpdate';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import About from './pages/About/About';
+import ContactUs from './pages/ContactUs/ContactUs';
+import Specialty from './pages/Specialty/Specialty';
 
 
 const router = createBrowserRouter([
@@ -35,6 +38,20 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage></HomePage>
+      },
+      {
+        path: "/about",
+        element: <About></About>
+
+      },
+      {
+        path: '/specialty',
+        element : <Specialty></Specialty>
+
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUs></ContactUs>
       },
       {
         path: "/login",
