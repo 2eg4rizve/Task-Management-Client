@@ -15,12 +15,18 @@ const ToDoList = () => {
         return <p>Loading.................</p>
     }
 
-    const myTasks = tasks.filter(item => item.userEmail == user.email);
+    const myTasks = tasks.filter(item => item.userEmail == user.email && item.store == "toDo");
 
     console.log("myTasks : ", myTasks);
 
-    const handleDelete = id => {
+    const handleDelete = (id, title, descriptions, deadlines, priority, store, userName, userEmail) => {
         console.log("delete id : ", id);
+
+        store = "ongoing"
+
+        const newTask = { title, descriptions, deadlines, priority, store, userName, userEmail };
+
+
         Swal.fire({
             title: "Are you sure?",
             text: "You want to  add this in ongoing list",
@@ -31,21 +37,27 @@ const ToDoList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-
+                refetch();
                 fetch(`http://localhost:5000/tasks/${id}`, {
-                    method: 'DELETE'
+                    method: "PUT",
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(newTask),
                 })
                     .then(res => res.json())
                     .then(data => {
-                        if (data.deletedCount > 0) {
-                            refetch();
+                        refetch();
+                       
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Add in ongoing list",
                                 icon: "success"
                             });
-                        }
+                        
                     })
+                    refetch();
+
             }
         });
     }
@@ -63,17 +75,18 @@ const ToDoList = () => {
                     <p>Descriptions : {item.descriptions}</p>
                     <p>deadlines : {item.deadlines}</p>
                     <p>priority : {item.priority}</p>
+                    <p>store : {item.store}</p>
 
 
-                    <button 
-                     onClick={() => handleDelete(item._id)}
-                     className="btn btn-sm my-[20px] btn-primary"
-                    
-                    > 
+                    <button
+                        onClick={() => handleDelete(item._id, item.title, item.descriptions, item.deadlines, item.priority, item.store, item.userName, item.userEmail)}
+                        className="btn btn-sm my-[20px] btn-primary"
 
-                    Mark As OnGoing
-                    
-                     </button>
+                    >
+
+                        Mark As OnGoing
+
+                    </button>
 
 
 
