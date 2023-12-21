@@ -130,7 +130,7 @@ const ToDoList = () => {
 
                     <button
                         onClick={() => handleDelete2(item._id)}
-                        className="btn btn-sm my-[20px] btn-primary"
+                        className="btn btn-sm my-[10px] btn-primary"
 
                     >
 
@@ -141,7 +141,7 @@ const ToDoList = () => {
                     <p></p>
 
                     <Link to={`/taskManagement/taskUpdate/${item._id}`}>
-                        <button className="btn btn-primary w-full  mt-[30px]">Update</button>
+                        <button className="btn btn-sm my-[10px] btn-primary">Update Task</button>
                     </Link>
 
 
