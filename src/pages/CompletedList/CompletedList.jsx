@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useTasks from "../../hooks/useTasks";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const CompletedList = () => {
@@ -102,7 +103,7 @@ const CompletedList = () => {
 
     return (
         <div>
-            <p className="font-bold text-3xl text-center mb-[20px]">My On Going List</p>
+            <p className="font-bold text-3xl text-center mb-[20px]">My Complete List</p>
 
             <p className="mb-[20px]">Total : {myTasks.length}</p>
 
@@ -137,6 +138,13 @@ const CompletedList = () => {
                         Delete Task
 
                     </button>
+
+                    <p></p>
+
+                    <Link to={`/taskManagement/taskUpdate/${item._id}`}>
+                        <button className="btn btn-sm my-[10px] btn-primary">Update Task</button>
+                    </Link>
+
 
 
 

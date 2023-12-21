@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useTasks from "../../hooks/useTasks";
+import { Link } from "react-router-dom";
 
 
 const OngoingList = () => {
@@ -139,6 +140,11 @@ const OngoingList = () => {
 
                     </button>
 
+                    <p></p>
+
+                    <Link  to={`/taskManagement/taskUpdate/${item._id}`}>
+                        <button className="btn btn-sm my-[10px] btn-primary">Update Task</button>
+                    </Link>
 
 
                 </div>)
