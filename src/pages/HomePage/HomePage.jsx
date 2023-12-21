@@ -1,4 +1,7 @@
+import About from "../About/About";
 import Banner from "../Banner/Banner";
+import ContactUs from "../ContactUs/ContactUs";
+import Specialty from "../Specialty/Specialty";
 
 
 const HomePage = () => {
@@ -7,6 +10,9 @@ const HomePage = () => {
 
             {/* HomePage */}
             <Banner></Banner>
+            <About></About>
+            <Specialty></Specialty>
+            <ContactUs></ContactUs>
 
         </div>
     );
