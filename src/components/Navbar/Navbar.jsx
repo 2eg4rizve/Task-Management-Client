@@ -23,7 +23,6 @@ const Navbar = () => {
         </NavLink>
 
         <div className="mr-[20px]"></div>
-
         <NavLink
             to="/about"
             className={({ isActive, isPending }) =>
@@ -33,6 +32,20 @@ const Navbar = () => {
             About
         </NavLink>
 
+
+        <div className="mr-[20px]"></div>
+        <NavLink
+            to="/builtFor"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
+            }
+        >
+            Built For
+        </NavLink>
+
+
+
+
         <div className="mr-[20px]"></div>
         <NavLink
             to="/specialty"
@@ -40,7 +53,7 @@ const Navbar = () => {
                 isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
             }
         >
-          Specialty
+            Specialty
         </NavLink>
 
         <div className="mr-[20px]"></div>
@@ -50,7 +63,7 @@ const Navbar = () => {
                 isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
             }
         >
-           Contact-Us
+            Contact-Us
         </NavLink>
 
         <div className="mr-[20px]"></div>
@@ -60,10 +73,10 @@ const Navbar = () => {
                 isPending ? "pending" : isActive ? "text-[#362FD9] underline font-bold" : ""
             }
         >
-          Task Managment
+            Task Managment
         </NavLink>
 
-        
+
 
 
 
@@ -115,7 +128,7 @@ const Navbar = () => {
                                 </div>
 
                                 <div>
-                                    
+
                                     <button
                                         onClick={logOut}
                                         className="btn btn-sm  btn-primary bg-[#F4E869] text-black">Logout</button>

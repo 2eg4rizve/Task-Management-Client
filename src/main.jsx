@@ -28,6 +28,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import About from './pages/About/About';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Specialty from './pages/Specialty/Specialty';
+import BuiltFor from './pages/BuiltFor/BuiltFor';
 
 
 const router = createBrowserRouter([
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About></About>
+
+      },
+      {
+        path: "/builtFor",
+        element: <BuiltFor></BuiltFor>
 
       },
       {
