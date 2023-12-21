@@ -2,6 +2,7 @@ import About from "../About/About";
 import Banner from "../Banner/Banner";
 import BuiltFor from "../BuiltFor/BuiltFor";
 import ContactUs from "../ContactUs/ContactUs";
+import Footer from "../Footer/Footer";
 import Specialty from "../Specialty/Specialty";
 
 
@@ -15,6 +16,7 @@ const HomePage = () => {
             <BuiltFor></BuiltFor>
             <Specialty></Specialty>
             <ContactUs></ContactUs>
+            <Footer></Footer>
 
         </div>
     );
