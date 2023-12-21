@@ -22,7 +22,7 @@ const Specialty = () => {
 
             <p className="text-5xl font-bold text-center my-[60px] pt-[40px]">Specialty</p>
 
-            <div className="space-y-5 font-semibold  ps-[35px] mb-[150px]">
+            <div className="space-y-5 font-semibold  px-[35px] mb-[150px]">
                 <li>
                     Responsive Design: Seamlessly experience our platform on any device - phone, tablet, or PC - with a design that adapts to your screen size.
                 </li>
@@ -48,6 +48,14 @@ const Specialty = () => {
 
                 <li>
                     Dynamic Task Lists: Instantly see newly added tasks in the to-do list, and smoothly transition tasks between lists with real-time updates, ensuring a dynamic and organized workflow.
+                </li>
+
+                <li>
+                    Notifications for Updates: Stay informed with toast notifications for task assignments, updates, and deadlines, keeping you in the loop with your task management activities.
+                </li>
+
+                <li>
+                    Interactive Animations (Optional): Elevate your experience with optional animations using libraries like Framer Motion or Spring.js, adding a visually engaging touch to the platform.
                 </li>
 
 

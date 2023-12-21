@@ -11,7 +11,7 @@ const TaskManagement = () => {
 
 
     return (
-        <div className="">
+        <div className="px-[40px]">
             <Navbar></Navbar>
 
 
