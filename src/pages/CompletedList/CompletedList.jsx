@@ -49,22 +49,53 @@ const CompletedList = () => {
                     .then(res => res.json())
                     .then(data => {
                         refetch();
-                       
+
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Add in Complete list",
+                            icon: "success"
+                        });
+
+                    })
+                refetch();
+
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Add in ongoing list",
+                    icon: "success"
+                });
+
+            }
+        });
+    }
+
+    const handleDelete2 = id => {
+        console.log("delete id : ", id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/tasks/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Add in Complete list",
+                                text: "Your file has been deleted.",
                                 icon: "success"
                             });
-                        
+                        }
                     })
-                    refetch();
-
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: "Add in ongoing list",
-                        icon: "success"
-                    });
-
             }
         });
     }
@@ -87,11 +118,23 @@ const CompletedList = () => {
 
                     <button
                         onClick={() => handleDelete(item._id, item.title, item.descriptions, item.deadlines, item.priority, item.store, item.userName, item.userEmail)}
-                        className="btn btn-sm my-[20px] btn-primary"
+                        className="btn btn-sm my-[10px] btn-primary"
 
                     >
 
                         Mark As Delete
+
+                    </button>
+
+                    <p></p>
+
+                    <button
+                        onClick={() => handleDelete2(item._id)}
+                        className="btn btn-sm my-[10px] btn-primary"
+
+                    >
+
+                        Delete Task
 
                     </button>
 
