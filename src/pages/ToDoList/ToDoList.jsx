@@ -58,6 +58,12 @@ const ToDoList = () => {
                     })
                     refetch();
 
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Add in ongoing list",
+                        icon: "success"
+                    });
+
             }
         });
     }
