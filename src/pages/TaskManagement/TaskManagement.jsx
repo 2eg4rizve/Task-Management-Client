@@ -22,10 +22,10 @@ const TaskManagement = () => {
                     <ul className="p-[10px] menu ">
 
                         <li><NavLink to="/taskManagement/newTask">New Task</NavLink> </li>
-                        <li><NavLink to="/taskManagement/previousTask">previousTask</NavLink> </li>
-                        <li><NavLink to="/taskManagement/toDoList">toDoList</NavLink> </li>
-                        <li><NavLink to="/taskManagement/ongoingList">ongoingList</NavLink> </li>
-                        <li><NavLink to="/taskManagement/completeList">completeList</NavLink> </li>
+                        <li><NavLink to="/taskManagement/previousTask">Previous Task</NavLink> </li>
+                        <li><NavLink to="/taskManagement/toDoList">ToDo List</NavLink> </li>
+                        <li><NavLink to="/taskManagement/ongoingList">Ongoing List</NavLink> </li>
+                        <li><NavLink to="/taskManagement/completeList">Complete List</NavLink> </li>
 
                     </ul>
 

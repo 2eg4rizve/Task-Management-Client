@@ -111,14 +111,14 @@ const ToDoList = () => {
 
                     <p>Title : {item.title}</p>
                     <p>Descriptions : {item.descriptions}</p>
-                    <p>deadlines : {item.deadlines}</p>
-                    <p>priority : {item.priority}</p>
-                    <p>store : {item.store}</p>
+                    <p>Deadlines : {item.deadlines}</p>
+                    <p>Priority : {item.priority}</p>
+                    <p>Type : {item.store}</p>
 
 
                     <button
                         onClick={() => handleDelete(item._id, item.title, item.descriptions, item.deadlines, item.priority, item.store, item.userName, item.userEmail)}
-                        className="btn btn-sm mt-[20px] btn-primary"
+                        className="btn btn-sm mt-[10px] btn-primary"
 
                     >
 
@@ -130,7 +130,7 @@ const ToDoList = () => {
 
                     <button
                         onClick={() => handleDelete2(item._id)}
-                        className="btn btn-sm my-[10px] btn-primary"
+                        className="btn btn-sm mt-[10px] btn-primary"
 
                     >
 

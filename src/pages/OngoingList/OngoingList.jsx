@@ -115,12 +115,12 @@ const OngoingList = () => {
                     <p>Descriptions : {item.descriptions}</p>
                     <p>Deadlines : {item.deadlines}</p>
                     <p>Priority : {item.priority}</p>
-                    <p>Store : {item.store}</p>
+                    <p>Type : {item.store}</p>
 
 
                     <button
                         onClick={() => handleDelete(item._id, item.title, item.descriptions, item.deadlines, item.priority, item.store, item.userName, item.userEmail)}
-                        className="btn btn-sm my-[10px] btn-primary"
+                        className="btn btn-sm mt-[10px] btn-primary"
 
                     >
 
@@ -132,7 +132,7 @@ const OngoingList = () => {
 
                     <button
                         onClick={() => handleDelete2(item._id)}
-                        className="btn btn-sm my-[10px] btn-primary"
+                        className="btn btn-sm mt-[10px] btn-primary"
 
                     >
 
@@ -143,7 +143,7 @@ const OngoingList = () => {
                     <p></p>
 
                     <Link  to={`/taskManagement/taskUpdate/${item._id}`}>
-                        <button className="btn btn-sm my-[10px] btn-primary">Update Task</button>
+                        <button className="btn btn-sm mt-[10px] btn-primary">Update Task</button>
                     </Link>
 
 

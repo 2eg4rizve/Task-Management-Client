@@ -9,8 +9,8 @@ const Banner = () => {
                 <div className="hero-overlay bg-opacity-10"></div>
                 <div className="hero-content ">
                     <div className="">
-                       
-                        <Link to={'/login'}> <button className="btn btn-secondary">Let’s Explore</button></Link>
+                        <p className="mb-[10px] font-bold text-[20px]">Click here ... </p>
+                        <Link to={'/login'}> <button className="btn btn-secondary border-4 border-red-600 text-[40px]">Let’s Explore </button></Link>
                     </div>
                     
                 </div>
